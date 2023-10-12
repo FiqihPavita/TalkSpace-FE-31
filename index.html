@@ -223,12 +223,13 @@
       <div class="testimoni-form-box">
         <h1>Form Testimoni</h1>
         <h2>Berikan kritik dan saran untuk kami!</h2>
-        <form action="" method="post">
+        <form action="https://talkspace-be-production.up.railway.app/api/testimoni/add" method="post">
           <div class="input-box">
             <div class="input-box">
-              <label for="username">Nama Lengkap</label>
+              <label for="nama_lengkap">Nama Lengkap</label>
               <input
                 type="text"
+                id="nama_lengkap"
                 required="required"
                 placeholder="Nama Lengkap"
                 pattern="[a-zA-Z ]+"
@@ -249,7 +250,7 @@
             <label for="paket-konseling">Paket layanan anda</label>
             <select
               title="paket-konseling"
-              id="paket-konseling"
+              id="layanan"
               name="paket-konseling"
             >
               <option value="--Pilih Layanan--" selected="selected" disabled>
@@ -263,7 +264,7 @@
           </div>
           <label for="review">Review:</label><br>
           <textarea id="review" name="review" rows="4" cols="95" required></textarea><br>
-          <button type="submit" class="submit-btn">Kirim</button>
+          <button type="submit" class="submit-btn" onclick="openPopup()">Kirim</button>
         </form>
       </div>
     </section>
